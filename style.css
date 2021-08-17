@@ -161,7 +161,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -150px;
-    z-index: -1;
+    z-index: -2;
 }
 
 .beer {
@@ -174,7 +174,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -120px;
-    z-index: -1;
+    z-index: -2;
     animation-delay: 0s;
 }
 
@@ -188,7 +188,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -120px;
-    z-index: -1;
+    z-index: -2;
     animation-delay: 2s;
 }
 
@@ -202,7 +202,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -160px;
-    z-index: -1;
+    z-index: -2;
     animation-delay: 4s;
 }
 
@@ -216,7 +216,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -180px;
-    z-index: -1;
+    z-index: -2;
     animation-delay: 5s;
 }
 
@@ -230,7 +230,7 @@ h1 {
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
     bottom: -220px;
-    z-index: -1;
+    z-index: -2;
     animation-delay: 6s;
 }
 
@@ -238,9 +238,30 @@ h1 {
     margin-top: 20%;
 }
 
+.info_title {
+    margin-bottom: 15%;
+}
+
 .info img {
     width: 300px;
     box-shadow: 10px 10px 20px rgb(0 0 0 / .5);
+    transform: rotate(-15deg);
+    position: relative;
+}
+
+.board {
+    position: absolute;
+    background-image: url(img/board.jpg);
+    background-color: rgba(255,255,255,.3);
+    background-blend-mode: lighten;
+    filter: blur(1px);
+    box-shadow: 10px 10px 10px rgb(0 0 0 / 50%);
+    top: 160px;
+    left: -24px;
+    width: 350px;
+    height: 350px;
+    transform: rotate( -15deg);
+    z-index: -1;
 }
 
 .info_text {
@@ -251,6 +272,7 @@ h1 {
     padding-top: 10%;
     margin-top: -5%;
     margin-left: 20%;
+    box-shadow: -10px 10px 10px rgb(0 0 0 / 30%);
 }
 
 .title {
@@ -390,6 +412,13 @@ footer img {
 
     .info img {
         width: 600px;
+    }
+
+    .board {
+        top: 440px;
+        left: 370px;
+        width: 700px;
+        height: 700px;
     }
 
     .info_text {
