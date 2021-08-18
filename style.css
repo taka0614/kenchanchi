@@ -5,7 +5,7 @@
 }
 
 body {
-    color: #333;
+    color: #6a4b2b;
 }
 
 li {
@@ -14,7 +14,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
 }
 
 .hmbmenu_btn{
@@ -81,7 +81,7 @@ a {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(107,74,43,.7);
 }
 
 
@@ -123,6 +123,7 @@ h1 {
 
 .area{
     position: relative;
+    background-color: #f3f3f3;
     width: 100%;
     height: 100%;
     padding-top: 5%;
@@ -242,22 +243,47 @@ h1 {
     margin-bottom: 15%;
 }
 
-.info img {
-    width: 300px;
-    box-shadow: 10px 10px 20px rgb(0 0 0 / .5);
-    transform: rotate(-15deg);
+.frame {
     position: relative;
 }
 
-.board {
+.frame::before {
     position: absolute;
+    display: block;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: rgba(0,0,0,.2);
+    box-shadow:
+    inset 0 0 20px rgba(0,0,0,.2) /* 背景色と同じ色 */,
+    inset 0 0 20px rgba(0,0,0,.2),
+    inset 0 0 20px rgba(0,0,0,.2),
+    inset 0 0 20px rgba(0,0,0,.2);
+    transform: rotate(-15deg);
+    z-index: 1;
+    }
+
+.info img {
+    width: 300px;
+    box-shadow: 10px 10px 10px rgb(0 0 0 / .5);
+    transform: rotate(-15deg);
+    position: relative;
+    filter: sepia(1);
+}
+
+.frame::after {
+    position: absolute;
+    display: block;
+    content: "";
+    top: -8%;
+    left: -6%;
     background-image: url(img/board.jpg);
     background-color: rgba(255,255,255,.3);
     background-blend-mode: lighten;
     filter: blur(1px);
     box-shadow: 10px 10px 10px rgb(0 0 0 / 50%);
-    top: 160px;
-    left: -24px;
     width: 350px;
     height: 350px;
     transform: rotate( -15deg);
@@ -273,6 +299,18 @@ h1 {
     margin-top: -5%;
     margin-left: 20%;
     box-shadow: -10px 10px 10px rgb(0 0 0 / 30%);
+}
+
+.pin {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 5%;
+    left: 30%;
+    background-color: #393e4f;
+    position: absolute;
+    z-index: 3;
 }
 
 .title {
@@ -317,7 +355,7 @@ h1 {
 }
 
 .access {
-    background-color: #f9f9f9;
+    background-color: #f8f4e6;
     padding: 5% 0;
 }
 
@@ -332,6 +370,7 @@ h1 {
 
 iframe {
     width: 90%;
+    filter: grayscale(1);
 }
 
 footer {
@@ -412,13 +451,6 @@ footer img {
 
     .info img {
         width: 600px;
-    }
-
-    .board {
-        top: 440px;
-        left: 370px;
-        width: 700px;
-        height: 700px;
     }
 
     .info_text {
