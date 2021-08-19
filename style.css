@@ -245,14 +245,15 @@ h1 {
 
 .frame {
     position: relative;
+    padding: 5%;
 }
 
 .frame::before {
     position: absolute;
+    top: 60%;
+    left: 0%;
     display: block;
     content: "";
-    top: 0;
-    left: 0;
     width: 300px;
     height: 300px;
     background: rgba(0,0,0,.2);
@@ -269,16 +270,18 @@ h1 {
     width: 300px;
     box-shadow: 10px 10px 10px rgb(0 0 0 / .5);
     transform: rotate(-15deg);
-    position: relative;
+    position: absolute;
+    top: 60%;
+    left: 0%;
     filter: sepia(1);
 }
 
 .frame::after {
     position: absolute;
+    top: -20%;
+    left: -5%;
     display: block;
     content: "";
-    top: -8%;
-    left: -6%;
     background-image: url(img/board.jpg);
     background-color: rgba(255,255,255,.3);
     background-blend-mode: lighten;
@@ -296,7 +299,7 @@ h1 {
     background-color: rgba(0,0,0,.5);
     padding: 5%;
     padding-top: 10%;
-    margin-top: -5%;
+    margin-top: 75%;
     margin-left: 20%;
     box-shadow: -10px 10px 10px rgb(0 0 0 / 30%);
 }
@@ -306,7 +309,7 @@ h1 {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    top: 5%;
+    top: 100%;
     left: 30%;
     background-color: #393e4f;
     position: absolute;
@@ -387,7 +390,7 @@ footer img {
 }
 
 .sns img {
-    width: 65px;
+    width: 50px;
 }
 
 @media (min-width: 769px) {
@@ -453,9 +456,26 @@ footer img {
         width: 600px;
     }
 
+    .frame {
+        margin: 0 200px;
+    }
+
+    .frame::before {
+        width: 600px;
+        height: 600px;
+    }
+
+    .frame::after {
+        width: 700px;
+        height: 700px;
+        top: 25%;
+        left: -5%;
+    }
+
     .info_text {
         max-width: 600px;
         margin-left: 40%;
+        margin-top: 30%;
     }
 
     .contents {
@@ -499,5 +519,9 @@ footer img {
 
     .sns {
         margin-top: 0%;
+    }
+
+    .sns img {
+        width: 65px;
     }
 }
