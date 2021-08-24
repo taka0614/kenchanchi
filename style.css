@@ -67,7 +67,7 @@ a {
   }
   .hamburger.active span:nth-child(1),
   .hamburger.active span:nth-child(3){
-    background :#fff;
+    background :#ffd30b;
     -webkit-transition-delay: 0.3s;
     -o-transition-delay: 0.3s;
     transition-delay: 0.3s;
@@ -129,10 +129,24 @@ a {
     text-decoration :none;
     margin-left: -5%;
   }
+
+  nav.globalMenuSp {
+      transform: translateX(-100%);
+  }
+
+  @keyframes slide {
+      0% {
+          transform: translateX(-100%);
+          opacity: 0;
+      }
+      100% {
+          transform: translateX(0);
+          opacity: 1;
+      }
+  }
   
-  /* このクラスを、jQueryで付与・削除する */
   nav.globalMenuSp.active {
-    opacity: 1;
+      animation: slide .3s forwards;
   }
 
   .hambmenu_anchor {
@@ -152,29 +166,44 @@ a {
   }
 
 nav.globalMenuSp.active ul .hambmenu_anchor.anchor1 {
-    animation-delay: 0s;
-}
-
-nav.globalMenuSp.active ul .hambmenu_anchor.anchor2 {
-    animation-delay: .2s;
-}
-
-nav.globalMenuSp.active ul .hambmenu_anchor.anchor3 {
     animation-delay: .4s;
 }
 
-nav.globalMenuSp.active ul .hambmenu_anchor.anchor4 {
+nav.globalMenuSp.active ul .hambmenu_anchor.anchor2 {
     animation-delay: .6s;
 }
 
-nav.globalMenuSp.active ul .hambmenu_anchor.anchor5 {
+nav.globalMenuSp.active ul .hambmenu_anchor.anchor3 {
     animation-delay: .8s;
+}
+
+nav.globalMenuSp.active ul .hambmenu_anchor.anchor4 {
+    animation-delay: 1s;
+}
+
+nav.globalMenuSp.active ul .hambmenu_anchor.anchor5 {
+    animation-delay: 1.2s;
 }
 
 nav.globalMenuSp.active ul .hambmenu_anchor {
     border-bottom: solid;
     margin: 0 5%;
     animation: line 1s forwards;
+}
+
+.sp_sns {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sp_sns img {
+    width: 50px;
+}
+
+.globalMenu {
+    display: none;
 }
 
 h1 {
@@ -498,6 +527,43 @@ footer img {
     background-position: left;
 }
 
+#page_top {
+    position: fixed;
+    bottom: 5%;
+    right: 7%;
+    z-index: 2;
+}
+
+#page_top a {
+    background-color: rgba(255, 211, 49, .8);
+    width: 50px;
+    height: 50px;
+    display: block;
+    color: #6a4b2b;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+#page_top a::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-top: solid 2px #6a4b2b;
+    border-right: solid 2px #6a4b2b;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -4px;
+    transform: rotate(315deg);
+}
+
+#page_top a:hover {
+    opacity: .5;
+    text-decoration: none;
+}
+
 @media (min-width: 769px) {
 
     h1 {
@@ -507,6 +573,38 @@ footer img {
 
     p {
         font-size: 24px;
+    }
+
+    .hamburger , .globalMenuSp , .hambmenu_anchor {
+        display: none;
+    }
+
+    .globalMenu {
+        width: 100%;
+        position: absolute;
+        top: 30%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1;
+        border: solid;
+    }
+
+    .globalMenu li {
+        width: 25%;
+        border-right: solid #6a4b2b;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .globalMenu li:last-of-type {
+        border-right: none;
+    }
+
+    .globalMenu a {
+        color: #6a4b2b;
+        font-size: 22px;
+        font-weight: bold;
     }
 
     .back1 {
@@ -607,7 +705,7 @@ footer img {
     }
 
     .menu_contents {
-        width: 300px;
+        width: 250px;
         margin-right: 10px;
     }
 
@@ -638,7 +736,7 @@ footer img {
     .sns {
         margin-top: 0%;
     }
-
+    
     .sns img {
         width: 65px;
     }
