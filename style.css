@@ -86,7 +86,6 @@ a {
     transform    : translateY(-16px) rotate(90deg);
   }
   
-  
   nav.globalMenuSp {
     position: fixed;
     z-index : 2;
@@ -128,6 +127,7 @@ a {
     color: #fff;
     padding: 1em 0;
     text-decoration :none;
+    margin-left: -5%;
   }
   
   /* このクラスを、jQueryで付与・削除する */
@@ -137,6 +137,7 @@ a {
 
   .hambmenu_anchor {
       opacity: 0;
+      line-height: 50px;
   }
 
   @keyframes line {
