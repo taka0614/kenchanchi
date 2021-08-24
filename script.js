@@ -1,12 +1,25 @@
 
-$(function () {
-    $('.hmbmenu_btn').on('click', function () {
-      $('.hmbmenu_contents , .hmbmenu_line').toggleClass('hmbmenu_open');
-      })	
+$(function() {
+  $('.hamburger').click(function() {
+      $(this).toggleClass('active');
+
+      if ($(this).hasClass('active')) {
+          $('.globalMenuSp').addClass('active');
+      } else {
+          $('.globalMenuSp').removeClass('active');
+      }
   });
-  
-  $(function () {
-    $('.hambmenu_anchor').on('click', function () {
-      $('.hmbmenu_contents , .hmbmenu_line').removeClass('hmbmenu_open');
-      })	
 });
+
+$(function() {
+  $('.hambmenu_anchor').click(function() {
+      $('.globalMenuSp').removeClass('active');
+  });
+});
+
+$(function() {
+  $('.hambmenu_anchor').click(function() {
+      $('.hamburger').removeClass('active');
+  });
+});
+
