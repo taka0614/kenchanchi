@@ -21,7 +21,7 @@ a {
     display : block;
     position: fixed;
     z-index : 3;
-    right : 13px;
+    right : 20px;
     top   : 12px;
     width : 42px;
     height: 42px;
@@ -312,7 +312,7 @@ h1 {
 }
 
 .info {
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 .info_title {
